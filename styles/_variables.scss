@@ -33,6 +33,10 @@
     --grey-97: #f7f7f8; // не используются
     --grey-99: #fcfcfd; // не используются
 
+    --gradient: linear-gradient(45deg,
+            var(--color-dark-15) 64%,
+            var(--color-accent) 136%);
+
     --font-family-base: "Inter", sans-serif; //--font-family по макету
     --font-family-accent: "Kumbh Sans", sans-serif; //--second-family по макету
 
@@ -41,7 +45,9 @@
 
     --transition-duration: 0.2s;
 
-    @include Laptop {
+    --100vw: calc(100vw - var(--scrollbar-width));
+
+    @include laptop {
         --container-wigth: #{rem(1280)}; //Ширина контейнера на планшете
     }
 
