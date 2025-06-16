@@ -1,7 +1,7 @@
 @use 'helpers' as *;
 
 :root {
-    --color-Light: #fff;
+    --color-light: #fff;
 
     --color-dark: #141414;
     --color-dark-10: #1a1a1a;
@@ -37,18 +37,22 @@
             var(--color-dark-15) 64%,
             var(--color-accent) 136%);
 
+    --border: #{rem(1)} solid var(--color-dark-15);
+
+    --shadow: 0 0 0 #{rem(3)} #191919;
+
     --font-family-base: "Inter", sans-serif; //--font-family по макету
     --font-family-accent: "Kumbh Sans", sans-serif; //--second-family по макету
 
-    --container-wigth: #{rem(1600)}; //Ширина контейнера
-    --container-pading-x: #{rem(16)}; //Отступ в мобильной версии от краев
+    --container-width: #{rem(1600)}; //Ширина контейнера
+    --container-padding-x: #{rem(16)}; //Отступ в мобильной версии от краев
 
     --transition-duration: 0.2s;
 
     --100vw: calc(100vw - var(--scrollbar-width));
 
     @include laptop {
-        --container-wigth: #{rem(1280)}; //Ширина контейнера на планшете
+        --container-width: #{rem(1280)}; //Ширина контейнера на планшете
     }
 
 }

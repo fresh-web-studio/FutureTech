@@ -242,7 +242,7 @@ svg * {
   font-display: swap;
 }
 :root {
-  --color-Light: #fff;
+  --color-light: #fff;
   --color-dark: #141414;
   --color-dark-10: #1a1a1a;
   --color-dark-15: #262626;
@@ -272,21 +272,23 @@ svg * {
   --gradient: linear-gradient(45deg,
           var(--color-dark-15) 64%,
           var(--color-accent) 136%);
+  --border: 0.0625rem solid var(--color-dark-15);
+  --shadow: 0 0 0 0.1875rem #191919;
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "Kumbh Sans", sans-serif;
-  --container-wigth: 100rem;
-  --container-pading-x: 1rem;
+  --container-width: 100rem;
+  --container-padding-x: 1rem;
   --transition-duration: 0.2s;
   --100vw: calc(100vw - var(--scrollbar-width));
 }
 @media (width <= 90.06125rem) {
   :root {
-    --container-wigth: 80rem;
+    --container-width: 80rem;
   }
 }
 
 .container {
-  max-width: calc(var(--container-wigth) + var(--container-padding-x) * 2);
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
@@ -467,6 +469,23 @@ a[class] {
     display: contents;
   }
 }
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.header__menu-link {
+  padding: 0.875rem 1.5rem;
+  color: var(--color-gray-50);
+}
+.header__menu-link.is-active {
+  font-weight: 500;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: 0.625rem;
+  pointer-events: none;
+}
 
 .icon {
   display: inline-flex;
@@ -485,6 +504,46 @@ a[class] {
 }
 .icon--yallow-arrow::after {
   background-image: url(../../icons/arrow-top-right-yellow.svg);
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 1.125rem 1.5rem;
+  font-size: 1.125rem;
+  color: var(--color-grey-60);
+  white-space: nowrap;
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: 0.75rem;
+}
+@media (width <= 90.06125rem) {
+  .button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+}
+@media (any-hover: hover) {
+  .button:hover {
+    color: var(--color-accent);
+    background-color: var(--color-dark-10);
+    border-color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .button:active {
+    color: var(--color-accent);
+    background-color: var(--color-dark-10);
+    border-color: var(--color-accent);
+  }
+}
+.button--accent {
+  font-weight: 500;
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  border-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
