@@ -494,7 +494,7 @@ button[aria-label]::before {
   }
 }
 .icon--yellow-arrow::after {
-  background-image: url(../../icons/arrow-top-right-yellow.svg);
+  background-image: url(../icons/arrow-top-right-yellow.svg);
 }
 
 .logo {
@@ -898,7 +898,7 @@ html.is-lock {
   translate: 0 -50%;
   content: "";
   right: 0;
-  background: url("../../icons/arrow-top-right-black.svg") center no-repeat var(--color-accent);
+  background: url("../icons/arrow-top-right-black.svg") center no-repeat var(--color-accent);
   border-radius: 50%;
 }
 .advantages-card__ditails {
@@ -938,7 +938,7 @@ html.is-lock {
   padding-left: 5rem;
   padding-bottom: 5rem;
   border-left: var(--border);
-  background: url("../../images/resources-preview/bg.png") 0 0/cover no-repeat;
+  background: url("../images/resources-preview/bg.png") 0 0/cover no-repeat;
 }
 .hero__advantages {
   border-block: var(--border);
