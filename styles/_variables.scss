@@ -15,6 +15,10 @@
     --color-accent: #ffd11a;
     --color-red: #f50;
 
+    --gradient: linear-gradient(45deg,
+            var(--color-dark-15) 60%,
+            var(--color-accent) 136%);
+
     --color-black: #000; // не используются
     --yellow-60: #ffd633; // не используются
     --yellow-70: #ffe066; // не используются
