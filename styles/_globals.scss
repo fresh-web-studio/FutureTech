@@ -3,10 +3,16 @@
 body {
     @include fluid-text(18, 24); //18pt шрифт в мобилке, а 24 в ПК версии 
 
+    display: flex; // Для расширения блока main на максимум
+    flex-direction: column; // Для расширения блока main на максимум
     font-family: var(--font-family-base);
     letter-spacing: -0.03em;
     color: var(--color-grey-50);
     background-color: var(--color-dark);
+}
+
+main {
+    flex-grow: 1; // Расширяем блок на максимум
 }
 
 h1,

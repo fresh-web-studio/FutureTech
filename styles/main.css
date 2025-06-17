@@ -344,10 +344,16 @@ svg * {
 
 body {
   font-size: clamp(1.5rem, 1.5955882353rem + -0.3921568627vw, 1.125rem);
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family-base);
   letter-spacing: -0.03em;
   color: var(--color-grey-50);
   background-color: var(--color-dark);
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,
@@ -602,7 +608,7 @@ html.is-lock {
     --size: 1.25rem;
   }
 }
-.icon--yallow-arrow::after {
+.icon--yellow-arrow::after {
   background-image: url(../../icons/arrow-top-right-yellow.svg);
 }
 
