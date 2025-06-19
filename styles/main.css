@@ -1145,9 +1145,11 @@ html.is-lock {
   }
 }
 
-.card {
-  display: grid;
-  grid-template-columns: 37.5% auto;
+@media (width > 63.99875rem) {
+  .card {
+    display: grid;
+    grid-template-columns: 37.5% auto;
+  }
 }
 .card__preview, .card__body {
   padding: 5rem;
@@ -1163,12 +1165,17 @@ html.is-lock {
   justify-content: center;
   row-gap: clamp(1.25rem, 0.444214876rem + 3.305785124vw, 3.75rem);
   padding-left: 0;
-  border-right: var(--border);
+}
+@media (width > 63.99875rem) {
+  .card__preview {
+    border-right: var(--border);
+  }
 }
 @media (width <= 63.99875rem) {
   .card__preview {
     padding-right: 0;
     padding-block: 3.125rem;
+    border-bottom: var(--border);
   }
 }
 .card__preview-main {
@@ -1196,6 +1203,11 @@ html.is-lock {
 .card__grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(0.625rem, 0.222107438rem + 1.652892562vw, 1.875rem);
+}
+@media (width <= 47.99875rem) {
+  .card__grid--2-cols {
+    grid-template-columns: 1fr;
+  }
 }
 .card__sell {
   display: flex;
